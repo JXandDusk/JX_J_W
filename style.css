@@ -1,7 +1,13 @@
 *{box-sizing:border-box}
 :root{
-  --bg:#090b0f;--panel:#11151b;--panel2:#151a21;--text:#f3efe7;--muted:#9da4af;
-  --line:rgba(255,255,255,.10);--accent:#d9c39a;--max:1180px
+  --bg:#090b0f;
+  --panel:#11151b;
+  --panel2:#151a21;
+  --text:#f3efe7;
+  --muted:#9da4af;
+  --line:rgba(255,255,255,.10);
+  --accent:#d9c39a;
+  --max:1180px;
 }
 html{scroll-behavior:smooth}
 body{margin:0;background:linear-gradient(180deg,#090b0f,#0b0e13 60%,#090b0f);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
