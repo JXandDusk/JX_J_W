@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a href="index.html" class="logo">Jie(Xander)Wang </a>
-    <nav>
+    <a href="index.html" class="logo">Jie (Xander) Wang</a>
+    <nav aria-label="Main navigation">
       <a href="#knowledge">Knowledge</a>
       <a href="#thoughts">Thoughts</a>
       <a href="#exploration">Exploration</a>
@@ -18,23 +19,45 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">A PERSONAL ARCHIVE</p>
-        <h1>I learn.<br>I think.<br>I explore.</h1>
+        <p class="eyebrow">A PERSONAL ARCHIVE · EST. 2021</p>
+        <h1>I learn.<br>I think.<br><em>I explore.</em></h1>
         <p class="hero-text">
           A living record of what I learned at university, how I think about life,
           and what I discover beyond the classroom.
         </p>
         <a class="cta" href="#knowledge">Enter the archive</a>
       </div>
-      <div class="hero-visual">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="planet"></div>
-      </div>
+<figure class="hero-visual" aria-labelledby="plate-caption">
+        <div class="plate">
+          <div class="plate-heading"><span>Studies in becoming</span><span>Plate I</span></div>
+          <svg viewBox="0 0 400 370" role="img" aria-labelledby="sphere-title sphere-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="sphere-title">An armillary sphere</title><desc id="sphere-desc">An original line drawing of a celestial instrument, with intersecting rings above a pedestal, like a plate in an old scientific book.</desc>
+            <defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><path d="M0 0V5" stroke="currentColor" stroke-width=".5"/></pattern></defs>
+            <g fill="none" stroke="currentColor" stroke-width="1.1">
+              <circle cx="200" cy="157" r="121"/><circle cx="200" cy="157" r="115"/>
+              <ellipse cx="200" cy="157" rx="69" ry="115" transform="rotate(-27 200 157)"/>
+              <ellipse cx="200" cy="157" rx="33" ry="115" transform="rotate(-27 200 157)"/>
+              <ellipse cx="200" cy="157" rx="115" ry="39" transform="rotate(-27 200 157)"/>
+              <ellipse cx="200" cy="157" rx="115" ry="47" transform="rotate(30 200 157)"/>
+              <path d="M139 33L262 282M91 212L309 103"/>
+              <path d="M130 48L137 59M98 80L109 88M80 123L94 127M81 166L94 165M94 208L107 201M124 245L134 234M164 271L168 257M209 278L207 265M252 266L246 254M289 239L279 229M315 199L301 195M322 153L309 153M311 111L298 116M286 74L276 85M248 48L242 61M205 36L205 50M164 42L168 55"/>
+              <circle cx="200" cy="157" r="25" fill="url(#hatch)"/><circle cx="200" cy="157" r="20"/>
+              <path d="M194 278V296L180 311H220L206 296V278M180 311L166 322H234L220 311M166 322V329H234V322M152 335H248M149 340H251"/>
+              <path d="M45 157H65M335 157H355M200 7V25" stroke-dasharray="2 3"/>
+              <path d="M77 350H323" stroke-width=".5"/>
+            </g>
+            <g fill="currentColor" font-family="Georgia,serif" font-size="10" font-style="italic"><text x="194" y="17">N</text><text x="345" y="151">E</text><text x="44" y="151">W</text><text x="265" y="290">Fig. 01</text></g>
+          </svg>
+          <p class="plate-title">A world still being understood.</p>
+        </div>
+        <figcaption id="plate-caption"><span>Observation · Reflection · Discovery</span><span>Personal collection</span></figcaption>
+      </figure>
     </section>
+
+    <div class="collection-note"><span>A cabinet of ideas &amp; experiences</span><span>Four collections · One unfolding life</span></div>
 
     <section id="knowledge" class="section">
       <div class="section-number">01</div>
@@ -104,7 +127,7 @@
         <div class="gallery-card">
           <div class="placeholder stevens">STEVENS TRAIL</div>
           <div class="gallery-meta">
-            <span>California · 2026</span>
+            <span>Field notes forthcoming</span>
             <h3>Stevens Trail</h3>
           </div>
         </div>
@@ -139,7 +162,7 @@
 
   <footer>
     <span>© 2026 Xander</span>
-    <span>Knowledge · Thoughts · Exploration</span>
+    <span>Collected with curiosity. Kept for reflection.</span>
   </footer>
 
   <script src="script.js"></script>
