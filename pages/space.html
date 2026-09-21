@@ -7,7 +7,7 @@
   <title>Personal space — Xander</title>
   <link rel="stylesheet" href="../style.css?v=20260920-travel-clock" />
   <style>
-    .space-page{width:min(860px,calc(100% - 48px));margin:56px auto 100px}.space-back{display:inline-block;margin-bottom:42px;color:var(--accent);font-size:13px}.space-card{padding:clamp(26px,5vw,56px);border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 14px 36px rgba(25,62,59,.06)}.space-card h1{margin:8px 0 14px;font-size:clamp(42px,7vw,76px);line-height:1.06;letter-spacing:-.06em}.space-intro{max-width:570px;color:var(--text-soft);font-size:17px}.space-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.space-slot{min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;border:1px dashed #b8d3c7;border-radius:14px;background:#f3f8f5;color:var(--muted)}.space-slot strong{font-size:19px;color:var(--text);font-weight:600;margin-top:6px}.space-slot span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}.space-note{margin-top:28px;font-size:13px;color:var(--muted)}@media(max-width:650px){.space-page{margin-top:34px}.space-slots{grid-template-columns:1fr}.space-slot{min-height:115px}}
+    .space-page{width:min(860px,calc(100% - 48px));margin:56px auto 100px}.space-back{display:inline-block;margin-bottom:42px;color:var(--accent);font-size:13px}.space-card{padding:clamp(26px,5vw,56px);border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 14px 36px rgba(25,62,59,.06)}.space-card h1{margin:8px 0 14px;font-size:clamp(42px,7vw,76px);line-height:1.06;letter-spacing:-.06em}.space-intro{max-width:570px;color:var(--text-soft);font-size:17px}.space-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.space-slot{min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;border:1px dashed #b8d3c7;border-radius:14px;background:#f3f8f5;color:var(--muted)}.space-slot strong{font-size:19px;color:var(--text);font-weight:600;margin-top:6px}.space-slot span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}.space-note{margin-top:28px;font-size:13px;color:var(--muted)}.about-page{margin-top:34px;border-top:1px solid var(--line);padding-top:36px}.about-block{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);gap:34px;align-items:stretch;padding:34px 0;border-top:1px solid var(--line)}.about-block:first-child{border-top:0;padding-top:0}.about-copy p:not(.eyebrow){font-size:17px;color:var(--text-soft);line-height:1.8}.about-photo{min-height:270px;display:grid;place-items:center;border:1px dashed #b8d3c7;border-radius:16px;background:linear-gradient(135deg,#f3f8f5,#e7f0ea);color:var(--accent);font:10px/1.5 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}.hobby-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.hobby-photo{height:118px;display:grid;place-items:center;border:1px dashed #b8d3c7;border-radius:12px;background:#f3f8f5;color:var(--accent);font:9px/1.5 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}@media(max-width:650px){.space-page{margin-top:34px}.space-slots{grid-template-columns:1fr}.space-slot{min-height:115px}.about-block{grid-template-columns:1fr}.about-photo{min-height:200px}.hobby-photo{height:86px}}
   </style>
 </head>
 <body>
@@ -17,11 +17,24 @@
       <p class="eyebrow" id="space-collection">PERSONAL SPACE</p>
       <h1 id="space-title">A new space</h1>
       <p class="space-intro">This is a quiet place to collect ideas over time. Add whatever belongs here when you are ready.</p>
-      <section class="who-am-i" id="who-am-i" hidden>
-        <p class="eyebrow">WHO AM I?</p>
-        <p>My name is Jie Wang (王杰). I was born in Fujian, mainland China, and immigrated to the United States at the age of ten. I spent my formative years in Brooklyn, New York, then moved to Boston for higher education before continuing my studies in California.</p>
-        <p>Today, California has been home for nearly a decade. Here I completed high school and earned my degree at UC Davis.</p>
-      </section>
+      <div class="about-page" id="about-page" hidden>
+        <section class="about-block">
+          <div class="about-copy">
+            <p class="eyebrow">WHO AM I?</p>
+            <p>My name is Jie Wang (王杰). I was born in Fujian, mainland China, and immigrated to the United States at the age of ten. I spent my formative years in Brooklyn, New York, then moved to Boston for higher education before continuing my studies in California.</p>
+            <p>Today, California has been home for nearly a decade. Here I completed high school and earned my degree at UC Davis.</p>
+          </div>
+          <div class="about-photo" role="img" aria-label="Reserved for a portrait or personal photograph">Add a portrait</div>
+        </section>
+        <section class="about-block">
+          <div class="about-copy">
+            <p class="eyebrow">MY HOBBIES</p>
+            <p>Use this section to collect the things that make your days feel like your own: music, travel, hiking, photography, reading, and whatever you want to explore next.</p>
+            <div class="hobby-photos" aria-label="Reserved image spaces"><div class="hobby-photo">Add photo</div><div class="hobby-photo">Add photo</div><div class="hobby-photo">Add photo</div></div>
+          </div>
+          <div class="about-photo" role="img" aria-label="Reserved for a hobbies photograph">Add a hobbies photo</div>
+        </section>
+      </div>
       <div class="space-slots">
         <div class="space-slot"><span>01 / Notes</span><strong>Write something</strong></div>
         <div class="space-slot"><span>02 / Media</span><strong>Add a photo</strong></div>
@@ -35,7 +48,7 @@
     const title=params.get('title'); const collection=params.get('collection');
     if(title){document.title=title+' — Xander';document.getElementById('space-title').textContent=title;}
     if(collection){document.getElementById('space-collection').textContent=collection.toUpperCase()+' · PERSONAL SPACE';}
-    if(title==='About Me'){document.getElementById('who-am-i').hidden=false;}
+    if(title==='About Me'){document.querySelector('.space-intro').hidden=true;document.getElementById('about-page').hidden=false;document.querySelector('.space-slots').hidden=true;document.querySelector('.space-note').hidden=true;}
   </script>
 </body>
 </html>
