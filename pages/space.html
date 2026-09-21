@@ -17,6 +17,11 @@
       <p class="eyebrow" id="space-collection">PERSONAL SPACE</p>
       <h1 id="space-title">A new space</h1>
       <p class="space-intro">This is a quiet place to collect ideas over time. Add whatever belongs here when you are ready.</p>
+      <section class="who-am-i" id="who-am-i" hidden>
+        <p class="eyebrow">WHO AM I?</p>
+        <p>My name is Jie Wang (王杰). I was born in Fujian, mainland China, and immigrated to the United States at the age of ten. I spent my formative years in Brooklyn, New York, then moved to Boston for higher education before continuing my studies in California.</p>
+        <p>Today, California has been home for nearly a decade. Here I completed high school and earned my degree at UC Davis.</p>
+      </section>
       <div class="space-slots">
         <div class="space-slot"><span>01 / Notes</span><strong>Write something</strong></div>
         <div class="space-slot"><span>02 / Media</span><strong>Add a photo</strong></div>
@@ -30,6 +35,7 @@
     const title=params.get('title'); const collection=params.get('collection');
     if(title){document.title=title+' — Xander';document.getElementById('space-title').textContent=title;}
     if(collection){document.getElementById('space-collection').textContent=collection.toUpperCase()+' · PERSONAL SPACE';}
+    if(title==='About Me'){document.getElementById('who-am-i').hidden=false;}
   </script>
 </body>
 </html>
