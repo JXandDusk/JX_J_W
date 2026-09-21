@@ -189,3 +189,130 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0 40px;b
     gap:8px;
   }
 }
+
+/* Museum Clock */
+
+.museum-clock{
+  position:absolute;
+  right:-115px;
+  bottom:45px;
+
+  width:170px;
+  padding:12px;
+
+  background:var(--bg);
+  border:1px solid var(--line);
+
+  box-shadow:4px 4px 0 var(--line);
+}
+
+.clock-face{
+  position:relative;
+
+  width:144px;
+  height:144px;
+
+  border:1px solid #8f8776;
+  border-radius:50%;
+
+  background:#eee6d7;
+}
+
+.clock-face:before{
+  content:"";
+  position:absolute;
+  inset:8px;
+
+  border:1px solid #b5ab97;
+  border-radius:50%;
+}
+
+.clock-number{
+  position:absolute;
+
+  font-family:Georgia, serif;
+  font-size:11px;
+  font-style:italic;
+
+  color:#59594c;
+}
+
+.n12{
+  top:8px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.n3{
+  right:9px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.n6{
+  bottom:7px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.n9{
+  left:9px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.clock-hand{
+  position:absolute;
+
+  left:50%;
+  bottom:50%;
+
+  transform-origin:bottom center;
+
+  background:#45473e;
+}
+
+.hour-hand{
+  width:2px;
+  height:38px;
+}
+
+.minute-hand{
+  width:1px;
+  height:51px;
+}
+
+.second-hand{
+  width:1px;
+  height:55px;
+
+  background:var(--accent);
+}
+
+.clock-center{
+  position:absolute;
+
+  width:7px;
+  height:7px;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  background:var(--accent);
+  border-radius:50%;
+}
+
+.clock-caption{
+  display:flex;
+  justify-content:space-between;
+
+  margin-top:10px;
+
+  font:8px/1.5 Arial,sans-serif;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+
+  color:var(--muted);
+}
