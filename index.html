@@ -6,6 +6,10 @@
   <meta name="description" content="Xander's personal archive of knowledge, thoughts, exploration, and life." />
   <title>Xander — Knowledge · Thoughts · Exploration</title>
   <link rel="stylesheet" href="style.css?v=20260920-travel-clock" />
+
+  <style>
+    .live-clock .second{height:39%;width:2px;background:#b94b3b;transform-origin:50% 100%;z-index:3}.live-time{margin:18px 0 0;text-align:center;font:600 30px/1 Arial,sans-serif;letter-spacing:.08em;color:var(--text)}.world-times{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.world-times div{padding:10px;background:rgba(255,255,255,.48);text-align:center}.world-times span,.world-times small{display:block;font:9px/1.5 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.world-times strong{display:block;margin:4px 0;font:600 17px/1 Arial,sans-serif;letter-spacing:.05em;color:var(--text)}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +41,22 @@
         </p>
         <a class="cta" href="#knowledge">Enter the archive</a>
       </div>
-<figure class="hero-visual travel-clock" aria-labelledby="clock-caption"><div class="clock-card"><p class="clock-kicker">A pause on the journey</p><div class="travel-clock-face" role="img" aria-label="An illustrated analog clock showing ten past ten"><span class="tick t12">12</span><span class="tick t3">3</span><span class="tick t6">6</span><span class="tick t9">9</span><span class="hand hour"></span><span class="hand minute"></span><span class="hand pin"></span></div><p class="clock-quote">Time is measured best<br>by where it takes you.</p></div><figcaption id="clock-caption"><span>Travel time · Slow moments</span><span>Keep moving</span></figcaption></figure>
+<figure class="hero-visual travel-clock live-clock" aria-labelledby="clock-caption">
+  <div class="clock-card">
+    <p class="clock-kicker">California time · right now</p>
+    <div class="travel-clock-face" role="img" aria-label="Live analog clock for California time">
+      <span class="tick t12">12</span><span class="tick t3">3</span><span class="tick t6">6</span><span class="tick t9">9</span>
+      <span class="hand hour" id="ca-hour"></span><span class="hand minute" id="ca-minute"></span><span class="hand second" id="ca-second"></span><span class="hand pin"></span>
+    </div>
+    <p class="live-time" id="ca-time">--:--:--</p>
+    <p class="clock-quote">California · Pacific Time</p>
+    <div class="world-times" aria-label="Additional world times">
+      <div><span>China</span><strong id="cn-time">--:--</strong><small>Beijing</small></div>
+      <div><span>New York</span><strong id="ny-time">--:--</strong><small>Eastern Time</small></div>
+    </div>
+  </div>
+  <figcaption id="clock-caption"><span>World time · living archive</span><span>Always moving</span></figcaption>
+</figure>
     </section>
 
     <div class="collection-note"><span>A cabinet of ideas &amp; experiences</span><span>An unfolding collection · A life in progress</span></div>
@@ -377,6 +396,16 @@
     <span>Collected with curiosity. Kept for reflection.</span>
   </footer>
 
+
+  <script>
+    (() => {
+      const zones={ca:'America/Los_Angeles',cn:'Asia/Shanghai',ny:'America/New_York'};
+      const parts=(zone)=>new Intl.DateTimeFormat('en-US',{timeZone:zone,hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'}).formatToParts(new Date()).reduce((out,p)=>(out[p.type]=p.value,out),{});
+      const setTime=(id,zone,seconds)=>{const p=parts(zone);document.getElementById(id).textContent=seconds?p.hour+':'+p.minute+':'+p.second:p.hour+':'+p.minute;return p;};
+      const update=()=>{const p=setTime('ca-time',zones.ca,true);setTime('cn-time',zones.cn);setTime('ny-time',zones.ny);const h=(+p.hour%12)+(+p.minute/60),m=(+p.minute)+(+p.second/60),s=+p.second;document.getElementById('ca-hour').style.transform='translateX(-50%) rotate('+h*30+'deg)';document.getElementById('ca-minute').style.transform='translateX(-50%) rotate('+m*6+'deg)';document.getElementById('ca-second').style.transform='translateX(-50%) rotate('+s*6+'deg)';};
+      update();setInterval(update,1000);
+    })();
+  </script>
   <script src="script.js?v=20260920-travel-clock"></script>
 </body>
 </html>
