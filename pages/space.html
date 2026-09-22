@@ -61,7 +61,7 @@
     if(title){document.title=title+' — Xander';document.getElementById('space-title').textContent=title;}
     if(collection){document.getElementById('space-collection').textContent=collection.toUpperCase()+' · PERSONAL SPACE';}
     if(title==='About Me'){document.querySelector('.space-intro').hidden=true;document.getElementById('about-page').hidden=false;document.querySelector('.space-slots').hidden=true;document.querySelector('.space-note').hidden=true;}
-    const biologySections={起源:'biology-origin',宏观:'biology-macro',微观:'biology-micro'};if(collection==='Biology'&&(title==='Biology'||biologySections[title])){document.querySelector('.space-intro').hidden=true;document.querySelector('.space-slots').hidden=true;document.querySelector('.space-note').hidden=true;if(title==='Biology')document.getElementById('biology-page').hidden=false;else document.getElementById(biologySections[title]).hidden=false;}
+    const biologySections={起源:'biology-origin',宏观:'biology-macro',微观:'biology-micro'};if((collection==='Biology'||collection==='Life Science')&&(title==='Biology'||biologySections[title])){document.querySelector('.space-intro').hidden=true;document.querySelector('.space-slots').hidden=true;document.querySelector('.space-note').hidden=true;if(title==='Biology')document.getElementById('biology-page').hidden=false;else document.getElementById(biologySections[title]).hidden=false;}
   </script>
 </body>
 </html>
