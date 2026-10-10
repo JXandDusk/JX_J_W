@@ -10,8 +10,10 @@
   <style>
     .live-clock .second{height:39%;width:2px;background:#b94b3b;transform-origin:50% 100%;z-index:3}.live-time{margin:18px 0 0;text-align:center;font:600 30px/1 Arial,sans-serif;letter-spacing:.08em;color:var(--text)}.world-times{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.world-times div{padding:10px;background:rgba(255,255,255,.48);text-align:center}.world-times span,.world-times small{display:block;font:9px/1.5 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.world-times strong{display:block;margin:4px 0;font:600 17px/1 Arial,sans-serif;letter-spacing:.05em;color:var(--text)}
   </style>
+  <link rel="stylesheet" href="starfield.css?v=20261009" />
 </head>
-<body>
+<body class="starry-home">
+  <div class="night-sky" aria-hidden="true"><canvas id="starfield"></canvas><div class="sky-mountains far"></div><div class="sky-mountains near"></div></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a href="index.html" class="logo">Jie (Xander) Wang</a>
@@ -410,5 +412,6 @@
     })();
   </script>
   <script src="script.js?v=20260920-travel-clock"></script>
+  <script src="starfield.js?v=20261009"></script>
 </body>
 </html>

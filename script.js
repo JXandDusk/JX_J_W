@@ -15,6 +15,7 @@ updateCurrentSection();
 
 
 function updateMuseumClock() {
+  if (!document.querySelector(".second-hand") || !document.querySelector(".minute-hand") || !document.querySelector(".hour-hand")) return;
   const now = new Date();
 
   const seconds = now.getSeconds();
